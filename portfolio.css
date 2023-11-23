@@ -1,0 +1,257 @@
+* {
+    background-color: #14131A;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar and main content columns */
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#sidebar {
+    position: fixed;
+    width: 200px;
+    height: 800px;
+    background-color: #1C1B23;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+#socials{
+   
+    align-items: center;
+}
+.S{
+    margin: 10px;
+}
+.S,
+#sidebar a {
+    transition: font-size 0.3s ease; /* Add a smooth transition for the font size increase effect */
+}
+
+.S:hover,
+#sidebar a:hover {
+    font-size: 1.1em; /* Adjust the value to control the amount of font size increase */
+}
+
+#mainbody {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Width of sidebar + gap */
+}
+
+/* Other styles remain the same */
+
+
+
+#head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1C1B23;
+    background: url('/photos/bg1.jpg') center/cover no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 150px;
+    width: 1550px;
+    backdrop-filter: blur(50px);
+}
+#head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('/photos/bg1.jpg') center/cover no-repeat;
+    border-radius: inherit;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+#profilephoto{
+    max-width: 100%;
+    height: 160px;
+    border-radius: 50%;
+    margin:0px; /* Add some spacing below the image */
+}
+
+h2{
+    color: white;
+    background-color: #1C1B23;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#name{
+    font-size: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.300);
+}
+#namephoto{
+display: flex;
+align-items: center;
+background-color: rgba(28, 27, 35, 0.300);
+}
+#instabtn{
+    background-color: #1C1B23;
+    padding: 20px;
+}
+#ProjectsSection{
+    margin-top: 30px;
+    color: white;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    color: #E4E4E7;
+    
+}
+
+h3{
+    color: grey;
+    font-size: 25px;
+}
+#Projects{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.description{
+    
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background-color: #1C1B23;
+    border-radius: 10px;
+}
+.projectgallery {
+    width: 380px;
+    height: 326px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add a smooth transition for the lift effect */
+}
+
+.projectgallery:hover {
+   
+    transform: translateY(-10px); /* Adjust the value based on how much you want it to lift */
+}
+
+.projectPhotos{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#WIKcards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@keyframes jiggle {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+  }
+  
+  .WIKtile {
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+    margin-right: 40px;
+    padding: 10px;
+    background-color: #1C1B23;
+    transition: transform 0.3s ease; /* Add a smooth transition for the jiggle effect */
+  }
+  
+  .WIKtile:hover {
+    animation: jiggle 0.5s ease; /* Apply the jiggle animation on hover */
+  }
+
+.WIKtile a{
+    margin: 5px;
+    border-radius: 5px;
+    border:1px solid cyan;
+    padding: 3px;
+    font-size: 14px;
+}
+.WIKtile h3{
+    background-color: #1C1B23 ;
+} 
+
+#Experience{
+    
+    padding: 10px;
+    color: white;
+    width: auto;
+    border-radius: 10px;
+    
+}
+#EXP{
+    display: flex;
+}
+
+#exp1{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:#1C1B23 ;
+}
+#exp2{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:#1C1B23 ;
+   
+}
+.expDetails {
+    background-color: #1C1B23;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transitions for both transform and filter */
+}
+
+.expDetails:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+}
+
+#EXP:hover .expDetails:not(:hover) {
+    transform: scale(1); /* Reset the transform on other .expDetails elements when one is hovered */
+    filter: blur(5px); /* Apply blur to other .expDetails elements when one is hovered */
+}
+
+
+.expDetails b{
+    background-color: #1C1B23;
+    font-size: 20px;
+}
+.expDetails p{
+    background-color: #1C1B23;
+}
+
+#coursework{
+    font-size: 20px;
+    color: white;
+    background-color:#1C1B23 ;
+}
