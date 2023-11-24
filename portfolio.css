@@ -1,22 +1,47 @@
-* {
+@keyframes slideInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  * {
     background-color: #14131A;
-}
-
-body {
+  }
+  
+  body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.container {
+  }
+  
+  .container {
     display: grid;
     grid-template-columns: 200px 1fr; /* Sidebar and main content columns */
     grid-template-rows: auto;
     gap: 20px;
     padding: 20px;
     overflow: hidden;
-}
-
-#sidebar {
+  }
+  
+  #sidebar {
     position: fixed;
     width: 200px;
     height: 800px;
@@ -24,19 +49,69 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0;
+    margin-left: 0; /* Set the initial position to 0 */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-}
-#socials{
-   
-    align-items: center;
-}
-.S{
+    animation: slideInFromLeft 1.5s ease-in-out; /* Sidebar slides in from left */
+  }
+  #mainbody {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Width of sidebar + gap */
+    animation: slideInFromRight 1.5s ease-in-out; /* Main body slides in from right */
+  }
+  
+  /* Add the rest of your styles for other elements here */
+  
+  #socials {
     margin: 10px;
+    align-items: center;
+    background-color: #1C1B23;
+  }
+  .S {
+    margin: 10px;
+  }
+  h3{
+    background-color: #1C1B23;
+  }
+  .res{
+
+    background-color: #1C1B23;
+  }
+#res1{
+    margin-bottom: 20px;
 }
+  #phone{
+    padding: 10px;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+  }
+  
+  #linkedin {
+    margin-right: 10px; 
+    margin-bottom: 20px;
+    background-color: #1C1B23;/* Adjust the right margin to add spacing between the LinkedIn icon and text */
+  }
+  
+  #git {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: #1C1B23; /* Adjust the right margin to add spacing between the GitHub icon and text */
+  }
+  
+  #Insta {
+    margin-right: 10px; 
+    margin-bottom: 20px;
+    background-color: #1C1B23;/* Adjust the right margin to add spacing between the Instagram icon and text */
+  }
+  
+  
 .S,
 #sidebar a {
     transition: font-size 0.3s ease; /* Add a smooth transition for the font size increase effect */
@@ -47,17 +122,11 @@ body {
     font-size: 1.1em; /* Adjust the value to control the amount of font size increase */
 }
 
-#mainbody {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 20px; /* Width of sidebar + gap */
+.S{
+    margin-right: 10px;
 }
 
-/* Other styles remain the same */
+
 
 
 
@@ -73,8 +142,11 @@ body {
     height: 150px;
     width: 1550px;
     backdrop-filter: blur(50px);
-}
-#head::before {
+    animation: slideInFromTop 1.5s ease-in-out; /* Adjust the duration and timing function as needed */
+    position: relative; /* Ensure the absolute positioning of ::before is relative to this element */
+  }
+  
+  #head::before {
     content: '';
     position: absolute;
     top: 0;
@@ -85,7 +157,7 @@ body {
     border-radius: inherit;
     filter: blur(5px);
     z-index: -1;
-}
+  }
 
 #profilephoto{
     max-width: 100%;
@@ -255,3 +327,52 @@ h3{
     color: white;
     background-color:#1C1B23 ;
 }
+#coursework{
+    border-radius: 10px;
+}
+.cw{
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #1C1B23;
+}
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  #Theory {
+    background-color: #1C1B23;
+    font-size: 25px;
+    color: white;
+    animation: slideIn 1.5s ease-in-out; /* Adjust the duration and timing function as needed */
+  }
+  
+  h2 {
+    font-size: 30px;
+    background-color: #14131A;
+  }
+  i{
+    font-size: 40px large;
+  }
+  #Alist{
+    background-color:#1C1B23;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+  }
+
+  #Alist li{
+    background-color: #1C1B23;
+    margin-bottom: 15px;
+  }
+  #Alist ul{
+    background-color: #1C1B23;
+  }
+
+  #achievements_form{
+    display: flex;
+  }
