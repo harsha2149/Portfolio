@@ -327,14 +327,26 @@ h3{
     color: white;
     background-color:#1C1B23 ;
 }
-#coursework{
+#coursework {
     border-radius: 10px;
+    transition: transform 0.3s ease; /* Add a smooth transition for the scaling effect */
 }
-.cw{
+
+#coursework:hover {
+    transform: scale(1.05); /* Increase the size by 5% on hover, adjust as needed */
+}
+
+.cw {
     border-radius: 10px;
     padding: 20px;
     background-color: #1C1B23;
+    transition: transform 0.3s ease; /* Add a smooth transition for the scaling effect */
 }
+
+.cw:hover {
+    transform: scale(1.0); /* Increase the size by 5% on hover, adjust as needed */
+}
+
 @keyframes slideIn {
     from {
       transform: translateX(100%);
@@ -358,21 +370,80 @@ h3{
   i{
     font-size: 40px large;
   }
-  #Alist{
-    background-color:#1C1B23;
+  #Alist {
+    background-color: #1C1B23;
     padding: 20px;
     color: white;
     border-radius: 10px;
-  }
+    height: 200px;
+    transition: transform 0.3s ease; /* Add a smooth transition for the scaling effect */
+}
 
-  #Alist li{
+#Alist:hover {
+    transform: scale(1.05); /* Increase the size by 5% on hover, adjust as needed */
+}
+
+#Alist li {
     background-color: #1C1B23;
     margin-bottom: 15px;
-  }
-  #Alist ul{
-    background-color: #1C1B23;
-  }
+}
 
-  #achievements_form{
+#Alist ul {
+    background-color: #1C1B23;
+}
+
+#achievements_form {
     display: flex;
-  }
+}
+
+
+  /* Add these styles to your existing CSS file or create a new one */
+#form{
+    border-radius: 10px;
+        margin-left: 20px !important; 
+}
+form {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form div {
+    color: white;
+    background-color: #1C1B23;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
